@@ -9,7 +9,7 @@ table, th, td {
   border: 1px solid black;
 }
 </style>
-<script src="Grade.htm"></script>
+<script src="Grade2.js"></script>
 
 </head>
 <body>
@@ -17,14 +17,14 @@ table, th, td {
        
 
 </body>
-  <script>
- var grade108 = [
-["阿臭","S001",77,80,43,59,33,65,52],
-["胖胖","S002",96,72,31,60,52,73,45],
-["阿肥","S003",46,79,50,95,63,81,43],
-["妞妞","S004",55,82,63,59,70,63,67]
+<script>
+var grade108 = [
+["張小美","S001",80,88,83,70,0,85,10,60],
+["邱婷婷","S002",90,98,89,85,90,88,96, 0],
+["楊大名","S003",50,92,89,95,75,73,5,70],
+["林志玲","S004",85,82,80,62,77,88,90, 0]
 ];
-var tableStr = "<tr> <th >姓名</th><th>學號</th><th>作業 1</th><th>作業 2</th><th>作業 3</th><th>作業 4</th><th>作業 5</th><th>期中考</th><th>期末考</th><th>總成績</th</tr>";
+var tableStr = "<tr> <th >姓名</th><th>學號</th><th>作業 1</th><th>作業 2</th><th>作業 3</th><th>作業 4</th><th>作業 5</th><th>期中考</th><th>期末考</th><th>期末補考</th><th>總成績</th</tr>";
 for(var i=0；i<4；i++)
   {var ret；
    ret=grade108[i][2]*0.08；
@@ -34,8 +34,9 @@ for(var i=0；i<4；i++)
    ret=ret+grade108[i][6]*0.08；
    ret=ret+grade108[i][7]*0.3；
    ret=ret+grade108[i][8]*0.3；
+   ret=ret+grade108[i][9]*0.3；
    var trStr = "<tr>";
-   for(j=0;j<9;j++ )
+   for(j=0;j<10;j++ )
     {trStr = trStr + "<td>";
 	   trStr = trStr + grade108[i][j]; 
 	   trStr = trStr + "</td>"; 
@@ -43,7 +44,6 @@ for(var i=0；i<4；i++)
    trStr = trStr + "<td>";
 	 trStr = trStr + ret; 
 	 trStr = trStr + "</td>";  
-
   trStr = trStr + "</tr>";
 	tableStr = tableStr + trStr;
    //alert(ret)；
@@ -51,4 +51,4 @@ for(var i=0；i<4；i++)
   document.getElementById("t1").innerHTML = tableStr;
   
     </script>
-</html>
+    </html>
